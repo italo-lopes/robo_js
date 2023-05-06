@@ -155,10 +155,28 @@ function tratarEstatistica(peca,operador,parada,limiteAlcancado){
 
 
 
+const selecionarRobo = document.querySelectorAll('.selecionar-robo')
+console.log(selecionarRobo)
 
+selecionarRobo.forEach( (element)=>{
+    element.addEventListener('click', (evet)=>{
+        const v1 =  evet.target.dataset.corrobo
+        mudarFoto(v1)
+ 
+    })
+})
+function mudarFoto(v1){
+    const roboCor = document.querySelectorAll('.robo')
+    console.log(roboCor)
+    roboCor.forEach( (eve)=>{
+        if(eve.dataset.imagem == v1){
+         eve.style.display  = 'block'
+        }else{
+            eve.style.display  = 'none'
+        }
+    })
 
-
-
+}
 
 // somar.addEventListener('click', (evento)=>{
 //     manipularDados("subtrair")

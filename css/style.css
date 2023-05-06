@@ -15,8 +15,6 @@ body {
     padding: 0;
     margin: 0;
     font-weight: 300;
-
-
 }
 
 body, input {
@@ -218,6 +216,12 @@ main {
     order: 1;
     flex-basis: 35%;
     margin: 10px 0 0;
+}
+[data-imagem] {
+    display: none;
+}
+[data-imagem ="azul"] {
+    display: block;
 }
 
 @media screen and (max-width: 1600px) {
